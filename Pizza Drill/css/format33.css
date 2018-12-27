@@ -1,0 +1,160 @@
+
+body { 
+	background: url('../img/pizza-factory.png') no-repeat bottom right fixed;
+}
+
+.column {
+	float: left;
+	padding: 10px;
+	height: 300px;
+}
+
+.left {
+	width: 60%;
+}
+
+.right {
+	width: 35%;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+td {
+	font-size: 10px;
+	border: 1px solid black;
+	padding-right: 25px;
+	padding-left: 5px;
+	background-color: #ddf;
+}
+
+th {
+	font-size: 12px;
+	border: 1px solid black;
+	border-top: 3px solid black;
+	padding-left: 5px;
+}
+
+table {
+	margin: 5px auto;
+	background-color: #fff;
+	text-align: left;
+	border: 3px solid black;
+	border-radius: 4px;
+}
+
+#content {
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+	max-width:700px;
+	max-height: 500px;
+	padding: 15px;
+	margin-left: 25px;
+	margin-top: 20px;
+	opacity: 1;
+	font-size: 10px;
+	border-width: 3px;
+	border-radius: 5px;
+	border-style: solid;
+}
+	
+#order-form {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	margin-right: 25px;
+	height: 140px;
+	background: #f00;
+	padding: 10px;
+	font-size: 10px
+	justify-content: center;
+	text-align: center;
+	border-width: 3px;
+	border-radius: 5px;
+	border-style: solid;
+}
+
+.veggies, .meats, .radios {
+	display: flex;
+	justify-content: left;
+}
+
+img {
+	margin-right: 30px;
+}
+
+.veggies img {
+	margin-right: 13px;
+}
+
+.radios img {
+	margin-right: 85px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 40px;
+  align-items: center;
+}
+
+.flex-container input {
+	text-align: center;
+}
+
+.flex-container img {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: flex;
+	justify-content: space-between;
+}
+
+label {
+	width: 88px;
+	text-align: left;
+	padding-right: 5px;
+	padding-top: 5px:
+	vertical-align: center;
+	margin-top: 8px;
+}
+
+.vert_selections {
+	display: flex;
+	align-items: stretch;
+	width: 750px;
+}
+
+.vertical {
+	width: 190px;
+	margin-right: 10px;
+}
+
+.order-controls {
+	display: flex;
+    justify-content: center;
+	margin: 0 auto;
+	width: 250px;
+	font-size: 10px;
+}
+
+.button {
+	cursor: pointer;
+	color: #fff;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	border-radius: .5em;
+	margin: 10px auto;
+	padding: .1px 0 .1px 0px;
+    font: 14px sans-serif;
+	background-color: rgba(42, 76, 132, .95); /*#6486bc;*/
+	box-shadow: 0 0 0 2px rgba(255,255,255, .8);
+}
+
+.button>p {
+	padding-top: 5px;
+}

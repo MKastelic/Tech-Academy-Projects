@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS -->
+	<link rel="stylesheet" href="./css/format.css">
+	<link rel="stylesheet" href="./css/menu.css">
+	<link rel="stylesheet" href="./css/format33.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+	<title>Pizza Drill</title>
+	<script>
+  function preLoad() {
+  
+  // Size
+  a1 = new Image; a1.src = 'img/personal-pizza.jpg';  
+  a2 = new Image; a2.src = 'img/medium-pizza.jpg';
+  a3 = new Image; a3.src = 'img/large-pizza.jpg';
+  a4 = new Image; a4.src = 'img/extra-large-pizza.jpg';
+  
+  // Crust
+  b1 = new Image; b1.src = 'img/plain-crust.png';
+  b2 = new Image; b2.src = 'img/garlic-butter-crust.jpg';
+  b3 = new Image; b3.src = 'img/cheese-stuffed-crust.jpg';
+  b4 = new Image; b4.src = 'img/spicy-crust.jpg';
+  b5 = new Image; b5.src = 'img/house-special-crust.jpg';
+  
+  // Sauce
+  c1 = new Image; c1.src = 'img/pizza-marinara-sauce.jpg';
+  c2 = new Image; c2.src = 'img/pizza-white-sauce.jpg';
+  c3 = new Image; c3.src = 'img/pizza-barbecue-sauce.jpg';
+  c4 = new Image; c4.src = 'img/pizza-no-sauce.jpg';
+  
+  // Cheese
+  d1 = new Image; d1.src = 'img/regular-cheese.jpg';
+  d2 = new Image; d2.src = 'img/no-cheese.jpg';
+  d3 = new Image; d3.src = 'img/extra-cheese.jpg';
+}
+
+function im(image) {
+  document.getElementById(image[0]).src = eval(image + ".src")
+}
+	</script>
+  </head>
+  <body style="background-color: lightblue;" onLoad="preLoad()">
+	<div class="row">
+		<div class="column left">
+			<div id="content">
+				<h1>Portland Pizza Factory Menu</h1>
+			<form id="menu_forms">
+				<div class="vert_selections">
+					<div class="vertical" autocomplete="off">
+					  <input type="radio" name="1" onClick="im('a1'); userSelect('Personal Pizza','size');" checked> Personal Pizza<br>
+					  <input type="radio" name="1" onClick="im('a2'); userSelect('Medium Pizza','size');">        Medium Pizza<br>
+					  <input type="radio" name="1" onClick="im('a3'); userSelect('Large Pizza','size');">        Large Pizza<br>
+					  <input type="radio" name="1" onClick="im('a4'); userSelect('Extra Large Pizza','size');">        Extra Large Pizza<br>
+					</div>
+					<div class="vertical" autocomplete="off">
+					  <input type="radio" name="2" onClick="im('b1'); userSelect('Plain Crust','crust');" checked> Plain Crust<br>
+					  <input type="radio" name="2" onClick="im('b2'); userSelect('Garlic Butter Crust','crust');">        Garlic Butter Crust<br>
+					  <input type="radio" name="2" onClick="im('b3'); userSelect('Cheese Stuffed Crust','crust');">        Cheese Stuffed Crust<br>
+					  <input type="radio" name="2" onClick="im('b4'); userSelect('Spicy Crust','crust');">        Spicy Crust<br>
+					  <input type="radio" name="2" onClick="im('b5'); userSelect('House Special Crust','crust');">        House Special Crust<br>
+					</div>
+					<div class="vertical" autocomplete="off">
+					  <input type="radio" name="3" onClick="im('c1'); userSelect('Marinara Sauce','sauce');" checked> Marinara Sauce<br>
+					  <input type="radio" name="3" onClick="im('c2'); userSelect('White Sauce','sauce');">        White Sauce<br>
+					  <input type="radio" name="3" onClick="im('c3'); userSelect('Barbecue Sauce','sauce');">        Barbecue Sauce<br>
+					  <input type="radio" name="3" onClick="im('c4'); userSelect('No Sauce','sauce');">        No Sauce<br>
+					</div>
+					<div class="vertical" autocomplete="off">
+					  <input type="radio" name="6" onClick="im('d1'); userSelect('Regular Cheese','cheese');" checked> Regular Cheese<br>
+					  <input type="radio" name="6" onClick="im('d2'); userSelect('No Cheese','cheese');">        No Cheese<br>
+					  <input type="radio" name="6" onClick="im('d3'); userSelect('Extra Cheese','cheese');">        Extra Cheese<br>
+					</div>
+				</div>		
+				<div class="horz_selections">
+					<div class="radios">
+					 <img id="a" src="img/personal-pizza.jpg" width="100" height="100" alt="">
+					 <img id="b" src="img/plain-crust.png" width="100" height="100" alt="">
+					 <img id="c" src="img/pizza-marinara-sauce.jpg" width="100" height="100" alt="">
+					 <img id="d" src="img/regular-cheese.jpg" width="100" height="100" alt="">
+					</div>
+					 <div class="flex-container" autocomplete="off">
+						  <input type="checkbox" name="4" onClick="userSelect('Pepperoni','meat');" > <label>Pepperoni</label>
+						  <input type="checkbox" name="4" onClick="userSelect('Sausage','meat');" > <label>Sausage</label>
+						  <input type="checkbox" name="4" onClick="userSelect('Canadian Bacon','meat');" > <label>Canadian Bacon</label>
+						  <input type="checkbox" name="4" onClick="userSelect('Ground Beef','meat');" > <label>Ground Beef</label>
+						  <input type="checkbox" name="4" onClick="userSelect('Anchovy','meat');" > <label>Anchovy</label>
+						  <input type="checkbox" name="4" onClick="userSelect('Chicken','meat');" > <label>Chicken</label>
+					</div>
+					<div class="meats">
+					  <img id="m1" src="img/pepperoni.jpg" width="70" height="70" alt="">
+					  <img id="m1" src="img/sausage.jpg" width="70" height="70" alt="">
+					  <img id="m1" src="img/canadian-bacon.jpg" width="70" height="70" alt="">
+					  <img id="m1" src="img/ground-beef.jpg" width="70" height="70" alt="">
+					  <img id="m1" src="img/anchovy.jpg" width="70" height="70" alt="">
+					  <img id="m1" src="img/chicken.jpg" width="70" height="70" alt="">
+					</div>
+					<div class="flex-container" autocomplete="off">
+						  <input type="checkbox" name="5" onClick="userSelect('Tomatoes','veggie');"> <label>Tomatoes</label>
+						  <input type="checkbox" name="5" onClick="userSelect('Onions','veggie');" > <label>Onions</label>
+						  <input type="checkbox" name="5" onClick="userSelect('Olives','veggie');" > <label>Olives</label>
+						  <input type="checkbox" name="5" onClick="userSelect('Green Peppers','veggie');" > <label>Green Peppers</label>
+						  <input type="checkbox" name="5" onClick="userSelect('Mushrooms','veggie');" > <label>Mushrooms</label>
+						  <input type="checkbox" name="5" onClick="userSelect('Pineapple','veggie');" > <label>Pineapple</label>
+						  <input type="checkbox" name="5" onClick="userSelect('Spinach','veggie');" > <label>Spinach</label>
+						  <input type="checkbox" name="5" onClick="userSelect('Jalapeno','veggie');" > <label>Jalapeno</label>
+					</div>
+			</form>
+					<div class="veggies">
+					  <img id="v1" src="img/tomatoes.jpg" width="70" height="70" alt="">
+					  <img id="v1" src="img/sliced-onions.jpg" width="70" height="70" alt="">
+					  <img id="v1" src="img/olives.jpg" width="70" height="70" alt=""></td>
+					  <img id="v1" src="img/peppersgreensliced.jpg" width="70" height="70" alt="">
+					  <img id="v1" src="img/mushrooms.jpg" width="70" height="70" alt=""></td>
+					  <img id="v1" src="img/sliced-pineapple.jpg" width="70" height="70" alt="">
+					  <img id="v1" src="img/spinach.jpg" width="70" height="70" alt="">
+					  <img id="v1" src="img/jalapenos.jpg" width="70" height="70" alt="">
+					</div>
+				</div>		
+			</div>
+		</div>
+		<div class="column right">
+			<div id="order-form">
+				<h5>Build your pizza the way you like it!</h5>
+				<h5>Then place your order below.</h5>
+				<div class="order-controls">
+					<div class="button" onClick="printReceipt()">
+						<p>Confirm Order</p>
+					</div>
+					<div class="button" onClick="clearReceipt()">
+						<p>Cancel</p>
+					</div>
+				</div>
+			</div>
+			<table id="receipt_form">
+			</table>
+		</div>
+	</div>
+    <!-- Optional JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="./js/pizza.js"></script>
+	</div>
+  </body>
+</html>
+
+
+
+
